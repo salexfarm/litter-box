@@ -64,3 +64,12 @@ console.log(add('10')); // 1010
 console.log(add(10, '6')); // 106
 console.log(add(6, '10')); // 610
 console.log(add(16, 51, 62, 120)); // 67
+
+// 17. The "any" Type
+console.log("See flexible-types.js file");
+
+// 18. Understanding Union Types
+console.log("See flexible-types.js file");
+
+// 19. Arrays & Types
+console.log("See arrays-objects.js file");
