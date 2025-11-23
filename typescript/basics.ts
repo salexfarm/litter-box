@@ -59,7 +59,7 @@ function add(driverSpeed: number, b = 10) {
 }
 
 console.log(add(30)); // 40
-console.log(add(26, 40)); // 60
+console.log(add(26, 40)); // 66
 console.log(add('10')); // 1010
 console.log(add(10, '6')); // 106
 console.log(add(6, '10')); // 610
@@ -73,3 +73,21 @@ console.log("See flexible-types.js file");
 
 // 19. Arrays & Types
 console.log("See arrays-objects.js file");
+let hobbies = ['Sports', 'Cooking'];
+hobbies.push('Brazilian Jiu-Jitsu');
+console.log(hobbies);
+
+
+let x = 6;
+
+function hey (x: number = 40, y = 12) {
+    console.log("x is now:" + x);
+    console.log("y is now:" + y);
+    return x + y;
+}
+
+console.log(x);
+console.log(hey(x, 12));
+
+// 20. Advanced Array Types
+ console.log("See arrays-objects.js file");
