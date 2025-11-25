@@ -91,3 +91,6 @@ console.log(hey(x, 12));
 
 // 20. Advanced Array Types
  console.log("See arrays-objects.js file");
+
+// 22. Making Sense of Tuples
+console.log("See arrays-objects.js file");
