@@ -34,3 +34,33 @@ let abc: [number | boolean];
 abc = [65];
 
 console.log(abc);
+
+let array1 = [1, 2, 3, 4, 5];
+console.log(array1);
+
+let array2 :(string | number | boolean)[] = ["cat", "in", 5, true, "Hats"];
+
+let array3 = [[[1, 6, 6, 1, 4], [21, 52, 23, 23, 2], [24, 14, 14, 24, 4]], [[2, 41, 4, 4], [24, 24, 1]], [[3, 24, 4, 25], [23, 24, 14], [23, 24, 14], [23, 24, 14]]]
+console.log(array3);
+
+// 23. Object Types
+
+let users1: {
+    name: string;
+    age: number | string;
+    hobbies: string[];
+    role: {
+        description: string;
+        id: number;
+    }
+} = {
+    name: 'Max',
+    age: 38,
+    hobbies: ['Cooking', 'Swimming'],
+    role: {
+        description: 'admin',
+        id: 5
+    }
+};
+
+
