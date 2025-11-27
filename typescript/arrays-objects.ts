@@ -59,8 +59,55 @@ let users1: {
     hobbies: ['Cooking', 'Swimming'],
     role: {
         description: 'admin',
-        id: 5
+        id: 5,
     }
 };
+
+// 24. The "Must Not Be Null" Types
+let val: {} = {}
+let val2: {} = "abc"; // looks like an empty object when used as a type, but means not any value undefined/null
+const someObj = {}; // this would be an empty object
+
+// 25. Flexible Objects with the Record Type
+let data: {} = 'is a value';
+
+let data2: Record<string, number | string>; // Use this to define your key value pairs
+
+data2 = {
+    entry1: 1,
+    entry2: 'some string'
+};
+
+// 26. Working with Enums
+enum Role {
+    Admin, // 0 or you can assign them your own numbers or even strings
+    Editor, // 1
+    Guest // 2
+}
+
+enum Role2 {
+    Admin = "Admin",
+    Editor = "Editor",
+    Guest = "Guest",
+}
+
+let userRole: Role = Role.Admin; // 0 => Admin, 1 => Guest
+console.log(Role);
+
+userRole = Role.Guest;
+
+
+console.log(userRole);
+
+// 27. Being Specific With Literal Types
+let userRole2: "admin" | "editor" | "guest" = "admin";
+userRole2 = "admin";
+
+console.log(userRole2);
+
+
+
+
+
 
 
