@@ -99,15 +99,77 @@ userRole = Role.Guest;
 
 console.log(userRole);
 
-// 27. Being Specific With Literal Types
-let userRole2: "admin" | "editor" | "guest" = "admin";
-userRole2 = "admin";
+console.log("// 27. Being Specific With Literal Types");
 
-console.log(userRole2);
+// this is a preferable option to using enums
+let userRole27: "admin" | "editor" | "guest" = "admin";
+console.log(userRole27);
+userRole27 = "guest";
+console.log(userRole27);
 
+let possibleSelection: [1 | -1 , 1 | -1]; // [1, -1]
+possibleSelection = [-1, 1];
+console.log(possibleSelection);
 
+console.log("// 28. Type Aliases & Custom Types");
+type Role28 = 'admin' | 'editor' | 'guest' | 'reader';
+type User28 = {
+    name: string;
+    age: number;
+    role: Role28;
+    permissions: string[];
+};
 
+let userRole28: Role28 = 'admin';
+console.log(userRole28);
+console.log("// 29. Function Return Value Types");
 
+function add (x: number, y: number): number {
+    return x + y;
+}
 
+type underCase = 42 | 24 | 35;
+let x: underCase = 24;
+console.log(x);
 
+// 30. The "void" Type
+console.log("// 30. The void Type");
+//let message: string = "Hello World";
+//log(message);
+function log(message: string): void {
+    console.log(message);
+}
 
+// 31. The "never" Type
+console.log("// 31. The never Type");
+
+function logAndThrow (errorMessage: string): never {
+    console.log(errorMessage);
+    throw new Error(errorMessage);
+}
+
+// 32. Functions As Types
+function performJob(cb: (msg: string) => void) {
+    // ...
+    cb('Job done!');
+}
+
+performJob(log);
+
+type User = {
+    name: string;
+    age: number;
+    greet: () => string;
+};
+
+let user: User = {
+    name: 'Max',
+    age: 39,
+    greet() {
+        console.log('Hello there!');
+        return this.name;
+    }
+}
+
+console.log(user);
+console.log(user.greet());
